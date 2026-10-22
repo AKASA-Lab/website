@@ -185,7 +185,7 @@ function docsPage(page) {
 function homePage() {
   const content = `
     <section class="home-intro">
-      <h1>Intelligent Nutrient Management for Aeroponics</h1>
+      <h1>Build a Testbed, Create a dataset. Develop a model.</h1>
       <p class="project-name">Smart Aeroponics System</p>
       <p class="lead">Our project, <em>Intelligent Nutrient Management for Aeroponics</em>, uses fenugreek images to build a dataset and develop a model that can help identify nutrient-deficiency symptoms.</p>
       <div class="home-actions">
@@ -197,7 +197,7 @@ function homePage() {
     <section class="home-section">
       <div class="section-kicker">The study</div>
       <div>
-        <h2>Build a dataset. Develop a model.</h2>
+        <h2>Three connected project goals</h2>
         <p>We grow fenugreek in an aeroponic system and study plant responses across combinations of calcium nitrate, potassium sulphate, and ammonium phosphate. Our work connects three goals: build the testbed, collect the time-series dataset, and develop a model to identify deficiency symptoms associated with the tested fertilizer conditions.</p>
         <p>Each treatment is defined by the presence or absence of a fertilizer compound. We do not treat these as experiments that isolate elemental nitrogen, phosphorus, or potassium.</p>
       </div>
@@ -298,6 +298,8 @@ function render() {
   const sectionId = window.location.hash.split("#").slice(2).join("#");
   if (sectionId) {
     document.getElementById(decodeURIComponent(sectionId))?.scrollIntoView();
+  } else {
+    window.scrollTo({ top: 0, behavior: "instant" });
   }
   updateThemeControl();
   document.title = current.type === "docs" ? `${current.page.title} · Intelligent Nutrient Management for Aeroponics` : current.type === "github" ? "GitHub · Intelligent Nutrient Management for Aeroponics" : "Intelligent Nutrient Management for Aeroponics · Smart Aeroponics System";
